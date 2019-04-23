@@ -22,5 +22,6 @@
     "express": "^4.16.4",
     "node": "^11.14.0",
     "path": "^0.12.7"
-  }
+  },
+  "devDependencies": {}
 }
