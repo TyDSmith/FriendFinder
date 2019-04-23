@@ -20,7 +20,7 @@
   "dependencies": {
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
-    "node": "^11.13.0",
+    "node": "^11.14.0",
     "path": "^0.12.7"
   }
 }
