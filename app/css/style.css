@@ -1,3 +1,4 @@
 .individual-question{
-    margin: 15px 0;
+   padding: 15px;
+    border-bottom: solid 1px lightblue;
 }

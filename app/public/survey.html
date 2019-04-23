@@ -7,19 +7,23 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <script src="../../server.js"></script>
+    <script src="../routing/apiRoutes.js"></script>
+    <script src="../routing/htmlRoutes.js"></script>
+
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     
     <title>Friend Finder: Survey</title>
 </head>
 <body>
-
     <div class="container">
       <div class="row">
         <div class="col-12">
           <div class="card">
             <div class="card-header">
-              <h3><strong>Friend Survey</strong></h3>
+              <h3><span class="fa fa-facebook"></span><strong>riend Survey</strong></h3>
             </div>
             <div class="card-body">
               <form method="POST" role="form">
@@ -36,7 +40,7 @@
                     <div class="individual-question">
                         <h3>Question 1</h3>
                         <h5>I like pizza</h5>
-                        <select name="question1" value="this">
+                        <select id="question1Ans">
                             <option value="choice1">1 (Strongly Disagree)</option>
                             <option value="choice2">2</option>
                             <option value="choice3">3</option>
@@ -46,22 +50,29 @@
                     <div class="individual-question">
                         <h3>Question 2</h3>
                         <h5>I like running</h5>
-                        <select name="question1" value="this">
+                        <select id="question2Ans">
                             <option value="choice1">1 (Strongly Disagree)</option>
                             <option value="choice2">2</option>
                             <option value="choice3">3</option>
                             <option value="choice4">4 (Strongly Agree)</option>
                         </select>
-                        </div>
-                </div>
-  
+                    </div>
+                    <div class="individual-question">
+                            <h3>Question 3</h3>
+                            <h5>I like dogs</h5>
+                            <select id="question3Ans">
+                                <option value="choice1">1 (Strongly Disagree)</option>
+                                <option value="choice2">2</option>
+                                <option value="choice3">3</option>
+                                <option value="choice4">4 (Strongly Agree)</option>
+                            </select>
+                    </div>
 
-  
-                
+                </div>
               </form>
               <br>
               <div class="text-right">
-                <button type="submit" class="btn btn-primary btn-md" id="add-btn"><span class="fa fa-fire"></span> Add to the Force</button>
+                <button type="submit" class="btn btn-primary btn-md" id="add-btn"> Submit</button>
               </div>
             </div>
           </div>
@@ -69,24 +80,27 @@
         </div>
       </div>
     </div>
-  
-    <script type="text/javascript">
-      // Question: What does this code do?
-      $("#add-btn").on("click", function(event) {
-        event.preventDefault();
-        var newCharacter = {
-          name: $("#name").val().trim(),
-          role: $("#role").val().trim(),
-          age: $("#age").val().trim(),
-          forcePoints: $("#force-points").val().trim()
-        };
-  
-        // Question: What does this code do??
-        $.post("/api/characters", newCharacter)
-          .then(function(data) {
-            console.log("add.html", data);
-            alert("Adding character...");
-          });
+    <div><a href="/app/data/friends.js">Friends API</a></div>
+
+<script>
+  // Question: What does this code do?
+  $("#add-btn").on("click", function(event) {
+    event.preventDefault();
+    var newFriend = {
+      name: $('#name').val().trim(),
+      picture: $('#photo').val().trim(),
+      scores: [$("#question1Ans").val().trim(),
+             $("#question2Ans").val().trim(),
+             $("#question3Ans").val().trim()
+              ]
+
+    };
+    console.log(newFriend);
+
+    // Question: What does this code do??
+    $.post("/api/friends", newFriend)
+      .then(function(data) {
       });
-    </script>
+  });
+</script>
 </html>
