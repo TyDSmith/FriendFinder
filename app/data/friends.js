@@ -14,4 +14,6 @@
         1
       ]
     }
-  ]
+  ];
+
+  module.exports = friends;

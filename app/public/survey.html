@@ -44,7 +44,8 @@
                             <option value="choice1">1 (Strongly Disagree)</option>
                             <option value="choice2">2</option>
                             <option value="choice3">3</option>
-                            <option value="choice4">4 (Strongly Agree)</option>
+                            <option value="choice4">4</option>
+                            <option value="choice5">5 (Strongly Agree)</option>
                         </select>
                     </div>
                     <div class="individual-question">
@@ -54,53 +55,187 @@
                             <option value="choice1">1 (Strongly Disagree)</option>
                             <option value="choice2">2</option>
                             <option value="choice3">3</option>
-                            <option value="choice4">4 (Strongly Agree)</option>
+                            <option value="choice4">4</option>
+                            <option value="choice5">5 (Strongly Agree)</option>
                         </select>
                     </div>
                     <div class="individual-question">
-                            <h3>Question 3</h3>
-                            <h5>I like dogs</h5>
-                            <select id="question3Ans">
-                                <option value="choice1">1 (Strongly Disagree)</option>
-                                <option value="choice2">2</option>
-                                <option value="choice3">3</option>
-                                <option value="choice4">4 (Strongly Agree)</option>
-                            </select>
+                      <h3>Question 3</h3>
+                      <h5>I like dogs</h5>
+                      <select id="question3Ans">
+                          <option value="choice1">1 (Strongly Disagree)</option>
+                          <option value="choice2">2</option>
+                          <option value="choice3">3</option>
+                          <option value="choice4">4</option>
+                          <option value="choice5">5 (Strongly Agree)</option>
+                      </select>
                     </div>
+                    
+                    <div class="individual-question">
+                      <h3>Question 4</h3>
+                      <h5>I like writing</h5>
+                      <select id="question4Ans">
+                          <option value="choice1">1 (Strongly Disagree)</option>
+                          <option value="choice2">2</option>
+                          <option value="choice3">3</option>
+                          <option value="choice4">4</option>
+                          <option value="choice5">5 (Strongly Agree)</option>
+                      </select>
+                    </div> 
+
+                    <div class="individual-question">
+                      <h3>Question 5</h3>
+                      <h5>I like reading</h5>
+                      <select id="question5Ans">
+                          <option value="choice1">1 (Strongly Disagree)</option>
+                          <option value="choice2">2</option>
+                          <option value="choice3">3</option>
+                          <option value="choice4">4</option>
+                          <option value="choice5">5 (Strongly Agree)</option>
+                      </select>
+                    </div> 
+
+                    <div class="individual-question">
+                      <h3>Question 6</h3>
+                      <h5>I like the beach</h5>
+                      <select id="question6Ans">
+                          <option value="choice1">1 (Strongly Disagree)</option>
+                          <option value="choice2">2</option>
+                          <option value="choice3">3</option>
+                          <option value="choice4">4</option>
+                          <option value="choice5">5 (Strongly Agree)</option>
+                      </select>
+                    </div> 
+
+                    <div class="individual-question">
+                      <h3>Question 7</h3>
+                      <h5>I like big cities</h5>
+                      <select id="question7Ans">
+                          <option value="choice1">1 (Strongly Disagree)</option>
+                          <option value="choice2">2</option>
+                          <option value="choice3">3</option>
+                          <option value="choice4">4</option>
+                          <option value="choice5">5 (Strongly Agree)</option>
+                      </select>
+                    </div> 
+
+                    <div class="individual-question">
+                      <h3>Question 8</h3>
+                      <h5>I like history</h5>
+                      <select id="question8Ans">
+                          <option value="choice1">1 (Strongly Disagree)</option>
+                          <option value="choice2">2</option>
+                          <option value="choice3">3</option>
+                          <option value="choice4">4</option>
+                          <option value="choice5">5 (Strongly Agree)</option>
+                      </select>
+                    </div> 
+
+                    <div class="individual-question">
+                      <h3>Question 9</h3>
+                      <h5>I like science</h5>
+                      <select id="question9Ans">
+                          <option value="choice1">1 (Strongly Disagree)</option>
+                          <option value="choice2">2</option>
+                          <option value="choice3">3</option>
+                          <option value="choice4">4</option>
+                          <option value="choice5">5 (Strongly Agree)</option>
+                      </select>
+                    </div> 
+
+                    <div class="individual-question">
+                      <h3>Question 10</h3>
+                      <h5>I like the outdoors</h5>
+                      <select id="question10Ans">
+                          <option value="choice1">1 (Strongly Disagree)</option>
+                          <option value="choice2">2</option>
+                          <option value="choice3">3</option>
+                          <option value="choice4">4</option>
+                          <option value="choice5">5 (Strongly Agree)</option>
+                      </select>
+                    </div> 
+
 
                 </div>
               </form>
               <br>
               <div class="text-right">
-                <button type="submit" class="btn btn-primary btn-md" id="add-btn"> Submit</button>
+                <button type="submit" class="btn btn-primary btn-md" id="submit-survey-btn"> Submit</button>
               </div>
             </div>
           </div>
   
         </div>
       </div>
+      <div id ="resultsModal" class="modal fade" role= "dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class ="close" data-dismiss="modal">
+                &times;
+              </button>
+              <h2 class="modal-title"><strong>Best Match:</strong></h2>
+            </div>
+            <div class = "modal-body">
+              <h2 id="matchName"></h2>
+              <img id = "matchingImg" src="" alt="Placeholder">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">
+                Close
+              </button>
+            </div>
+
+
+          </div>
+        </div>
+
+      </div>
+
     </div>
     <div><a href="/app/data/friends.js">Friends API</a></div>
 
 <script>
   // Question: What does this code do?
-  $("#add-btn").on("click", function(event) {
-    event.preventDefault();
-    var newFriend = {
-      name: $('#name').val().trim(),
-      picture: $('#photo').val().trim(),
-      scores: [$("#question1Ans").val().trim(),
-             $("#question2Ans").val().trim(),
-             $("#question3Ans").val().trim()
-              ]
+  $("#submit-survey-btn").on("click", function() {
+ 
+    function validateForm(){
+      var isValid = true;
 
-    };
-    console.log(newFriend);
-
-    // Question: What does this code do??
-    $.post("/api/friends", newFriend)
-      .then(function(data) {
+      $(".form-control").each(function(){
+        if ($(this).val() === "") isValid = false;
       });
-  });
+      return isValid;
+    }
+    if (validateForm() === true) {
+      var userData = {
+        name: $("#name").val(),
+        photo: $("#photo").val(),
+        scores: [
+          $("#question1Ans").val(),
+          $("#question2Ans").val(),
+          $("#question3Ans").val(),
+          $("#question4Ans").val(),
+          $("#question5Ans").val(),
+          $("#question6Ans").val(),
+          $("#question7Ans").val(),
+          $("#question8Ans").val(),
+          $("#question9Ans").val(),
+          $("#question10Ans").val()
+        ]
+      };
+
+      var currentURL = window.location.origin;
+      console.log(window.location.origin);
+
+      $.post(currentURL + "/api/friends", userData, function(data){
+        $("#matchName").text(data.name);
+        $("#matchImg").text("src", data.photo);
+        $("#resultsModal").modal("toggle");
+      })
+    } else{
+      alert("Please complete the form before submitting!");
+    }
+    });
 </script>
 </html>
