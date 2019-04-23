@@ -6,6 +6,10 @@ var express = require('express');
 var app = express();
 var path = require('path');
 
+var bodyParser = require('body-parser');
+app.use(bodyParser.json()); // support json encoded bodies
+app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
+
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -17,5 +21,13 @@ app.listen(PORT, function() {
 });
 
 app.get('/api/friends', function(req, res) {
-    res.sendFile(path.join(__dirname + './app/data.friends.js'));
+    res.sendFile(path.join(__dirname + '/friends.js'));
   });
+
+app.post('/api/friends', function(req, res) {
+  var name = req.params.name;
+  var photo = req.params.photo;
+  var scores = req.params.scores;
+
+  console.log(name,photo,scores);
+});
